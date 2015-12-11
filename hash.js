@@ -63,7 +63,7 @@ if (Command.files) {
 	files = Command.files;
 }
 
-createOutputFiles = files.length === 0;
+createOutputFiles = Command.createOutputFiles || files.length === 0;
 
 /*
 	Hashing
