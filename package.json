@@ -1,6 +1,6 @@
 {
   "name": "hash-cli",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Easily hash files from the command line",
   "main": "hash-cli.js",
   "bin": "hash-cli.js",
