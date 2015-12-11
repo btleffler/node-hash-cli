@@ -2,8 +2,8 @@
   "name": "hash-cli",
   "version": "0.0.1",
   "description": "Easily hash files from the command line",
-  "main": "hash.js",
-  "bin": "hash.js",
+  "main": "hash-cli.js",
+  "bin": "hash-cli.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/btleffler/node-hash-cli.git"

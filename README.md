@@ -8,7 +8,7 @@ $ npm install -g hash-cli
 
 ## Usage
 ```
-Usage: hash [options]
+Usage: hash-cli [options]
 
   Options:
 
@@ -24,7 +24,7 @@ Usage: hash [options]
 
 ### Basic
 ```bash
-$ hash --algorithm sha1 --directory dir/to/hash --files file1,file2,file3
+$ hash-cli --algorithm sha1 --directory dir/to/hash --files file1,file2,file3
 ```
  - This will output the `sha1` hashes for `file1`, `file2`, and `file3` in `dir/to/hash`
  - Algorithm defaults to `sha1` and accepts anything that `require("crypto").createHash()` accepts
@@ -33,25 +33,25 @@ $ hash --algorithm sha1 --directory dir/to/hash --files file1,file2,file3
 
 ### Hash every file in the directory
 ```bash
-$ hash -a md5
+$ hash-cli -a md5
 ```
  - This will create a `.md5` file for each file in the directory
 
 ### Force creation of hash files
 ```bash
-$ hash -a sha256 -f file1.txt --createOutputFiles
+$ hash-cli -a sha256 -f file1.txt --createOutputFiles
 ```
   - Instead of outputting the shasum of `file1.txt`, this will create `file1.txt.sha256`
 
 ### List available hashing algorithms
 ```
-$ hash --list
+$ hash-cli --list
 ```
   - This will list the result of `require("crypto").getHashes()`
 
 ### Debugging
 ```
-$ hash [options] --debug
+$ hash-cli [options] --debug
 ```
   - If the debug option is supplied, the command will output a lot of debugging info. I'm not perfect.
 
