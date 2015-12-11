@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Node-hash-cli by btleffler</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/btleffler/node-hash-cli">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/btleffler/node-hash-cli/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/btleffler/node-hash-cli/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Node-hash-cli</h1>
+          <p>Easily hash files from the command line</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/btleffler">btleffler</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a id="hash" class="anchor" href="#hash" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hash</h1>
+
+<p>A simple command line tool to hash files.</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<div class="highlight highlight-source-shell"><pre>$ npm install -g hash-cli</pre></div>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<pre><code>Usage: hash [options]
+
+  Options:
+
+    -h, --help                             output usage information
+    -V, --version                          output the version number
+    -a, --algorithm [algo]                 Algorithm to hash with. Defaults to sha1
+    -d, --directory [dir]                  Directory to hash
+    -f, --files [file[,file[,file[...]]]]  Files to hash
+    --createOutputFiles                    Create hash files: 'FILENAME.EXT.ALG'
+    --list                                 List available algorithms
+    --debug                                Debug on errors
+</code></pre>
+
+<h3>
+<a id="basic" class="anchor" href="#basic" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic</h3>
+
+<div class="highlight highlight-source-shell"><pre>$ <span class="pl-c1">hash</span> --algorithm sha1 --directory dir/to/hash --files file1,file2,file3</pre></div>
+
+<ul>
+<li>This will output the <code>sha1</code> hashes for <code>file1</code>, <code>file2</code>, and <code>file3</code> in <code>dir/to/hash</code>
+</li>
+<li>Algorithm defaults to <code>sha1</code> and accepts anything that <code>require("crypto").createHash()</code> accepts</li>
+<li>Directory defaults to <code>process.cwd()</code>
+</li>
+<li>Files defaults to every file in the specified or current directory</li>
+</ul>
+
+<h3>
+<a id="hash-every-file-in-the-directory" class="anchor" href="#hash-every-file-in-the-directory" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hash every file in the directory</h3>
+
+<div class="highlight highlight-source-shell"><pre>$ <span class="pl-c1">hash</span> -a md5</pre></div>
+
+<ul>
+<li>This will create a <code>.md5</code> file for each file in the directory</li>
+</ul>
+
+<h3>
+<a id="force-creation-of-hash-files" class="anchor" href="#force-creation-of-hash-files" aria-hidden="true"><span class="octicon octicon-link"></span></a>Force creation of hash files</h3>
+
+<div class="highlight highlight-source-shell"><pre>$ <span class="pl-c1">hash</span> -a sha256 -f file1.txt --createOutputFiles</pre></div>
+
+<ul>
+<li>Instead of outputting the shasum of <code>file1.txt</code>, this will create <code>file1.txt.sha256</code>
+</li>
+</ul>
+
+<h3>
+<a id="list-available-hashing-algorithms" class="anchor" href="#list-available-hashing-algorithms" aria-hidden="true"><span class="octicon octicon-link"></span></a>List available hashing algorithms</h3>
+
+<pre><code>$ hash --list
+</code></pre>
+
+<ul>
+<li>This will list the result of <code>require("crypto").getHashes()</code>
+</li>
+</ul>
+
+<h3>
+<a id="debugging" class="anchor" href="#debugging" aria-hidden="true"><span class="octicon octicon-link"></span></a>Debugging</h3>
+
+<pre><code>$ hash [options] --debug
+</code></pre>
+
+<ul>
+<li>If the debug option is supplied, the command will output a lot of debugging info. I'm not perfect.</li>
+</ul>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p><a href="LICENSE">MIT</a></p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-49098224-4");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
