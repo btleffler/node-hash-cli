@@ -39,9 +39,9 @@ $ hash -a md5
 
 ### Force creation of hash files
 ```bash
-$ hash -a sha256 -f file1.txt
+$ hash -a sha256 -f file1.txt --createOutputFiles
 ```
-	- Instead of outputting the shasum of `file1.txt`, this will create `file1.txt.sha256`
+  - Instead of outputting the shasum of `file1.txt`, this will create `file1.txt.sha256`
 
 ### List available hashing algorithms
 ```
