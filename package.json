@@ -1,0 +1,28 @@
+{
+  "name": "Hash-Cli",
+  "version": "0.0.1",
+  "description": "Easily hash files from the command line",
+  "main": "hash.js",
+  "bin": "hash.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/btleffler/node-hash-cli.git"
+  },
+  "bugs": "https://github.com/btleffler/node-hash-cli/issues",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hash",
+    "md5",
+    "sha",
+    "cli"
+  ],
+  "author": "Ben Leffler <btleffler@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^1.5.0",
+    "commander": "^2.9.0",
+    "graceful-fs": "^4.1.2"
+  }
+}
