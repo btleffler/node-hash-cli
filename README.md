@@ -1,4 +1,4 @@
-# Hash
+# [Hash](https://www.npmjs.com/package/hash-cli)
 A simple command line tool to hash files.
 
 ## Installation
